@@ -230,6 +230,12 @@ $id ="Eradah";
 //session_abort();
 session_id($id);
 echo session_id($id);
+echo"<br>session_encode<br>";
+echo session_encode();
+session_abort();
+session_start();
+echo"<br>session_encode after abort<br>";
+echo session_encode();
 $val="regster";
 session_register('val');
 function session_is_registered($val)
@@ -240,7 +246,7 @@ echo "true" ;
     echo "fales";
 }
     
-    
+  session_unset();  
     ?>
 </div>
 </div>
